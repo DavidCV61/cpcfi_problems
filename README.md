@@ -1,9 +1,9 @@
 # cpcfi_problems
 
-- NAME:
-- CODEFORCES USER: 
-- GENERATION NUMBER:
-- MOST DIFFICULT TOPIC: 
+- NAME: David Cañedo Vértiz 
+- CODEFORCES USER: davidelchido
+- GENERATION NUMBER: 2G
+- MOST DIFFICULT TOPIC: Graphs
 
 # How to use this repo?
 
