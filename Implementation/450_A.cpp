@@ -7,64 +7,36 @@ int main(){
   std::cin.tie(nullptr);
   std::ios_base::sync_with_stdio(false);
  
-  int t;
-  cin>>t;
-  while(t--){
+  int n,m;
  
-  	int n,m,x,y;
- cin>>n>>m>>x>>y;
+ cin>>n>>m;
  
- int ct1=0;
- int ct2=0;
+ vector <int> v(n);
+  vector <int> a(n);
  
- string s;
+ for(int i=0;i<n;i++)cin>>v[i];
  
- 
+ for(int i=0; i<n;i++){
+	
+	if(v[i]%m==0)a[n-i-1]=v[i]/m;
+	else a[n-i-1]=(v[i]/m)+1;
+ }
+int max=0;
+int pos;
  for(int i=0;i<n;i++){
  
- 	cin>>s;
- 	int ct=0;
- 	
+ 	if(a[i]>max){
  
- 	for(int j=0;j<=m;j++){
- 
- 		if(s[j]=='*' || j==m){
- 
- 			if(ct==2){
- 
- 				ct2++;
- 
- 			}
- 			if(ct==1){
- 				ct1++;
- 			}
- 
- 			ct=0;
- 
- 		}
- 		
- 
- 		if(s[j]=='.') ct++;
- 
- 		if(ct==2){
- 
- 			ct2++;
- 			ct=0;
- 		}
+ 		max=a[i];
+ 		pos=n-i;
  	}
  }
  
+ cout<<pos<<endl;
  
  
- cout<<min(ct1*x+ct2*y,ct1*x+2*ct2*x)<<endl;
- 
-  }
- 
- 
- 
- 
- 
-  
- 
-    return 0;
+return 0;
 }
+ 
+ 
+ 
